@@ -1,0 +1,13 @@
+<launch>
+
+
+  <node 
+    name="acceleration_planner"
+    pkg="acceleration_planner"
+    type="acceleration_planner_copy.py"
+    output="screen"
+  />
+
+
+
+</launch>

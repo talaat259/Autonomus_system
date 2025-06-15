@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+
+    <node name="projection_birdeye_view" pkg="cam_lidar_fusion" type="projection_birdeye_view.py" output="screen"/> 
+    <node name="pc2cam_transform" pkg="cam_lidar_fusion" type="pc2cam_transform.py" output="screen"/>
+
+</launch>

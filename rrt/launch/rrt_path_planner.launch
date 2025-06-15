@@ -1,0 +1,10 @@
+<launch>
+
+  <node 
+    name="rrt"
+    pkg="rrt"
+    type="rrt.py"
+    output="screen"
+  />
+
+</launch>

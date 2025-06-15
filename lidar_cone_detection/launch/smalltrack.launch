@@ -1,0 +1,36 @@
+<launch>
+
+
+  <node 
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find lidar_cone_detection)/rviz/rviz_config.rviz"
+  />
+  
+  <node 
+    name="lidar_cone_detection"
+    pkg="lidar_cone_detection"
+    type="lidar_cone_detection"
+    output="screen"
+  />
+
+  
+  <node 
+    name="lidar_cone_centroid"
+    pkg="lidar_cone_detection"
+    type="lidar_cone_centroid.py"
+    output="screen"
+  />
+
+  <include file = "/home/bakri/work/aamfsd_cv_2022/src/rrt/launch/rrt_path_planner.launch" />
+
+  <include file = "/home/bakri/work/aamfsd_cv_2022/src/aam_cars/aam_car_2020/aamfsd_gazebo/launch/small_track.launch" />
+
+  <include file = "/home/bakri/work/aamfsd_cv_2022/src/aam_perception/darknet_ros/darknet_ros/launch/darknet_ros.launch" />
+
+  <include file = "/home/bakri/work/aamfsd_cv_2022/src/aam_perception/cam_lidar_fusion/launch/lidar_camera_fusion.launch" />
+  
+
+
+</launch>
